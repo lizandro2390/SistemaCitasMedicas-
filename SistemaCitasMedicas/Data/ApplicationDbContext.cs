@@ -9,7 +9,7 @@ namespace SistemaCitasMedicas.Data
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
-            Database.SetCommandTimeout(300); // Establece el tiempo de espera a 300 segundos
+            Database.SetCommandTimeout(300);
         }
 
         protected override void OnModelCreating(ModelBuilder builder)
@@ -26,7 +26,7 @@ namespace SistemaCitasMedicas.Data
                 .HasOne(c => c.Paciente)
                 .WithMany()
                 .HasForeignKey(c => c.PacienteId)
-                .OnDelete(DeleteBehavior.Restrict); // Evitar eliminación en cascada
+                .OnDelete(DeleteBehavior.Restrict);
 
             // Relación Cita con Doctor
             builder.Entity<Cita>()
@@ -34,6 +34,10 @@ namespace SistemaCitasMedicas.Data
                 .WithMany()
                 .HasForeignKey(c => c.DoctorId)
                 .OnDelete(DeleteBehavior.Restrict);
+
+            // Ignorar propiedades de navegación en la validación
+            builder.Entity<Cita>().Ignore(c => c.Paciente);
+            builder.Entity<Cita>().Ignore(c => c.Doctor);
         }
 
         public DbSet<Doctor> Doctors { get; set; }

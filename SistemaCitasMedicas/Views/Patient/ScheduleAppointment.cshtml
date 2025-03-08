@@ -12,9 +12,14 @@
                     <form asp-action="ScheduleAppointment" method="post">
                         <div class="mb-3">
                             <label class="form-label">Doctor</label>
-                            <select asp-items="@(new SelectList(ViewBag.Doctors, "Id", "NombreCompleto"))" class="form-control" asp-for="DoctorId" required>
+                            <select asp-for="DoctorId" class="form-control" required>
                                 <option value="">Seleccione un doctor</option>
+                                @foreach (var doctor in ViewBag.Doctors)
+                                {
+                                    <option value="@doctor.Id">@doctor.NombreCompleto</option>
+                                }
                             </select>
+                            <input type="hidden" asp-for="DoctorId" />
                             <span asp-validation-for="DoctorId" class="text-danger"></span>
                         </div>
                         <div class="mb-3">

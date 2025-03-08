@@ -26,7 +26,7 @@ namespace SistemaCitasMedicas.Models
 
         public string Notas { get; set; } // Opcional, no requerido
 
-        // Relaciones
+        // Propiedades de navegación (no se validan como requeridas)
         public IdentityUser Paciente { get; set; }
         public Doctor Doctor { get; set; }
     }

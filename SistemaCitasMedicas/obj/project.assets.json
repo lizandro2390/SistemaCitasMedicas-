@@ -4557,11 +4557,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lizan\\source\\repos\\lizandro2390\\SistemaCitasMedicas-\\SistemaCitasMedicas\\SistemaCitasMedicas.csproj",
+      "projectUniqueName": "C:\\Users\\lizan\\Source\\Repos\\lizandro2390\\SistemaCitasMedicas-\\SistemaCitasMedicas\\SistemaCitasMedicas.csproj",
       "projectName": "SistemaCitasMedicas",
-      "projectPath": "C:\\Users\\lizan\\source\\repos\\lizandro2390\\SistemaCitasMedicas-\\SistemaCitasMedicas\\SistemaCitasMedicas.csproj",
+      "projectPath": "C:\\Users\\lizan\\Source\\Repos\\lizandro2390\\SistemaCitasMedicas-\\SistemaCitasMedicas\\SistemaCitasMedicas.csproj",
       "packagesPath": "C:\\Users\\lizan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lizan\\source\\repos\\lizandro2390\\SistemaCitasMedicas-\\SistemaCitasMedicas\\obj\\",
+      "outputPath": "C:\\Users\\lizan\\Source\\Repos\\lizandro2390\\SistemaCitasMedicas-\\SistemaCitasMedicas\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -4594,8 +4594,7 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      },
-      "SdkAnalysisLevel": "9.0.200"
+      }
     },
     "frameworks": {
       "net8.0": {
@@ -4647,7 +4646,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
