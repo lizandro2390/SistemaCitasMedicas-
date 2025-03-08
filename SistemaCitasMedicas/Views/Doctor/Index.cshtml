@@ -1,0 +1,41 @@
+﻿@model IEnumerable<SistemaCitasMedicas.Models.Cita>
+@{
+    ViewData["Title"] = "Mis Citas";
+}
+
+<div class="container">
+    <h1 class="fw-bold text-primary mb-4">Mis Citas, @User.Identity.Name</h1>
+    <p class="lead">Aquí puedes ver y completar tus citas programadas.</p>
+
+    <table class="table table-striped table-hover shadow-sm">
+        <thead class="bg-primary text-white">
+            <tr>
+                <th>Paciente</th>
+                <th>Fecha y Hora</th>
+                <th>Consultorio</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var cita in Model)
+            {
+                <tr>
+                    <td>@cita.Paciente.UserName</td>
+                    <td>@cita.FechaHora.ToString("g")</td>
+                    <td>@cita.Consultorio</td>
+                    <td>@cita.Estado</td>
+                    <td>
+                        @if (cita.Estado == "Aprobada")
+                        {
+                            <form asp-action="CompleteAppointment" method="post" style="display:inline;">
+                                <input type="hidden" name="id" value="@cita.Id" />
+                                <button type="submit" class="btn btn-sm btn-success">Completar</button>
+                            </form>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

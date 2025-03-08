@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Dashboard Admin";
+}
+
+<div class="container">
+    <h1 class="fw-bold text-primary mb-4">Bienvenido, Administrador</h1>
+    <p class="lead">Gestiona el sistema de citas médicas desde este panel.</p>
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm border-0">
+                <div class="card-body text-center">
+                    <i class="fas fa-users fa-3x text-primary mb-3"></i>
+                    <h5 class="card-title">Pacientes</h5>
+                    <p class="card-text">Ver y gestionar pacientes registrados.</p>
+                    <a asp-action="Patients" class="btn btn-primary">Ir a Pacientes</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm border-0">
+                <div class="card-body text-center">
+                    <i class="fas fa-user-md fa-3x text-primary mb-3"></i>
+                    <h5 class="card-title">Doctores</h5>
+                    <p class="card-text">Crear y gestionar doctores.</p>
+                    <a asp-action="CreateDoctor" class="btn btn-primary">Crear Doctor</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm border-0">
+                <div class="card-body text-center">
+                    <i class="fas fa-user-tie fa-3x text-primary mb-3"></i>
+                    <h5 class="card-title">Secretarias</h5>
+                    <p class="card-text">Crear y gestionar secretarias.</p>
+                    <a asp-action="CreateSecretary" class="btn btn-primary">Crear Secretaria</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

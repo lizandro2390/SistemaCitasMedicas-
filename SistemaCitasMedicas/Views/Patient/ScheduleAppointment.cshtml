@@ -1,0 +1,61 @@
+﻿@model SistemaCitasMedicas.Models.Cita
+@{
+    ViewData["Title"] = "Programar Cita";
+}
+
+<div class="container">
+    <h1 class="fw-bold text-primary mb-4">Programar Nueva Cita</h1>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-lg border-0">
+                <div class="card-body p-5">
+                    <form asp-action="ScheduleAppointment" method="post">
+                        <div class="mb-3">
+                            <label class="form-label">Doctor</label>
+                            <select asp-items="@(new SelectList(ViewBag.Doctors, "Id", "NombreCompleto"))" class="form-control" asp-for="DoctorId" required>
+                                <option value="">Seleccione un doctor</option>
+                            </select>
+                            <span asp-validation-for="DoctorId" class="text-danger"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label asp-for="FechaHora" class="form-label">Fecha y Hora</label>
+                            <input asp-for="FechaHora" type="datetime-local" class="form-control" required min="@DateTime.Now.ToString("yyyy-MM-ddTHH:mm")">
+                            <span asp-validation-for="FechaHora" class="text-danger"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label asp-for="Consultorio" class="form-label">Consultorio</label>
+                            <input asp-for="Consultorio" class="form-control" placeholder="Ingrese el consultorio" required>
+                            <span asp-validation-for="Consultorio" class="text-danger"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label asp-for="Motivo" class="form-label">Motivo</label>
+                            <textarea asp-for="Motivo" class="form-control" placeholder="Ingrese el motivo de la cita" required></textarea>
+                            <span asp-validation-for="Motivo" class="text-danger"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label asp-for="Notas" class="form-label">Notas (opcional)</label>
+                            <textarea asp-for="Notas" class="form-control" placeholder="Ingrese notas adicionales"></textarea>
+                            <span asp-validation-for="Notas" class="text-danger"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Programar Cita</button>
+                    </form>
+                    @if (!ViewData.ModelState.IsValid)
+                    {
+                        <div class="alert alert-danger mt-3">
+                            <ul>
+                                @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+                                {
+                                    <li>@error.ErrorMessage</li>
+                                }
+                            </ul>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

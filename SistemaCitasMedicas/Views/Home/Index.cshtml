@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Bienvenido";
+}
+
+<div class="row justify-content-center align-items-center min-vh-100">
+    <div class="col-md-8 col-lg-6">
+        <div class="card shadow-lg border-0">
+            <div class="row g-0">
+                <!-- Sección de Bienvenida -->
+                <div class="col-md-6 d-none d-md-block bg-primary text-white p-5 rounded-start" style="background: linear-gradient(135deg, #007bff, #00c4cc);">
+                    <h2 class="fw-bold mb-3"><i class="fas fa-clinic-medical me-2"></i>Sistema Citas Médicas</h2>
+                    <p class="lead">Bienvenido a la solución líder en gestión de citas médicas. Calidad, eficiencia y cuidado profesional.</p>
+                </div>
+                <!-- Formulario de Login -->
+                <div class="col-md-6 p-5">
+                    <h3 class="fw-bold mb-4 text-center">Iniciar Sesión</h3>
+                    <form asp-controller="Account" asp-action="Login" method="post">
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Usuario</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                <input type="text" class="form-control" id="username" name="username" placeholder="Ingrese su usuario" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Contraseña</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                                <input type="password" class="form-control" id="password" name="password" placeholder="Ingrese su contraseña" required>
+                            </div>
+                        </div>
+                        @if (TempData["Error"] != null)
+                        {
+                            <div class="alert alert-danger text-center" role="alert">@TempData["Error"]</div>
+                        }
+                        <button type="submit" class="btn btn-primary w-100 mb-3">Iniciar Sesión</button>
+                        <div class="text-center">
+                            <a href="@Url.Action("ForgotPassword", "Account")" class="d-block mb-2 text-muted">¿Olvidaste tu contraseña?</a>
+                            <p>¿Aún no te has registrado? <a href="@Url.Action("Register", "Account")" class="text-primary fw-bold">Regístrate aquí</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

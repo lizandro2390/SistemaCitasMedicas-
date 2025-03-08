@@ -1,0 +1,47 @@
+﻿@model IEnumerable<SistemaCitasMedicas.Models.Cita>
+@{
+    ViewData["Title"] = "Gestionar Citas";
+}
+
+<div class="container">
+    <h1 class="fw-bold text-primary mb-4">Gestionar Citas, @User.Identity.Name</h1>
+    <p class="lead">Aquí puedes aprobar o cancelar citas programadas.</p>
+
+    <table class="table table-striped table-hover shadow-sm">
+        <thead class="bg-primary text-white">
+            <tr>
+                <th>Paciente</th>
+                <th>Doctor</th>
+                <th>Fecha y Hora</th>
+                <th>Consultorio</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var cita in Model)
+            {
+                <tr>
+                    <td>@cita.Paciente.UserName</td>
+                    <td>@cita.Doctor.NombreCompleto</td>
+                    <td>@cita.FechaHora.ToString("g")</td>
+                    <td>@cita.Consultorio</td>
+                    <td>@cita.Estado</td>
+                    <td>
+                        @if (cita.Estado == "Pendiente")
+                        {
+                            <form asp-action="ApproveAppointment" method="post" style="display:inline;">
+                                <input type="hidden" name="id" value="@cita.Id" />
+                                <button type="submit" class="btn btn-sm btn-success">Aprobar</button>
+                            </form>
+                            <form asp-action="CancelAppointment" method="post" style="display:inline;">
+                                <input type="hidden" name="id" value="@cita.Id" />
+                                <button type="submit" class="btn btn-sm btn-danger">Cancelar</button>
+                            </form>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
