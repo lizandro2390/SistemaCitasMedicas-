@@ -16,7 +16,7 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>(options => options.Sign
     .AddEntityFrameworkStores<ApplicationDbContext>()
     .AddDefaultTokenProviders();
 
-// Configurar la autenticación
+// Configurar la autenticación//
 builder.Services.AddAuthentication();
 
 var app = builder.Build();

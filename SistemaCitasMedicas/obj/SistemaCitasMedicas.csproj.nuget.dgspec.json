@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lizan\\source\\repos\\SistemaCitasMedicas\\SistemaCitasMedicas\\SistemaCitasMedicas.csproj": {}
+    "C:\\Users\\lizan\\source\\repos\\lizandro2390\\SistemaCitasMedicas-\\SistemaCitasMedicas\\SistemaCitasMedicas.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lizan\\source\\repos\\SistemaCitasMedicas\\SistemaCitasMedicas\\SistemaCitasMedicas.csproj": {
+    "C:\\Users\\lizan\\source\\repos\\lizandro2390\\SistemaCitasMedicas-\\SistemaCitasMedicas\\SistemaCitasMedicas.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lizan\\source\\repos\\SistemaCitasMedicas\\SistemaCitasMedicas\\SistemaCitasMedicas.csproj",
+        "projectUniqueName": "C:\\Users\\lizan\\source\\repos\\lizandro2390\\SistemaCitasMedicas-\\SistemaCitasMedicas\\SistemaCitasMedicas.csproj",
         "projectName": "SistemaCitasMedicas",
-        "projectPath": "C:\\Users\\lizan\\source\\repos\\SistemaCitasMedicas\\SistemaCitasMedicas\\SistemaCitasMedicas.csproj",
+        "projectPath": "C:\\Users\\lizan\\source\\repos\\lizandro2390\\SistemaCitasMedicas-\\SistemaCitasMedicas\\SistemaCitasMedicas.csproj",
         "packagesPath": "C:\\Users\\lizan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lizan\\source\\repos\\SistemaCitasMedicas\\SistemaCitasMedicas\\obj\\",
+        "outputPath": "C:\\Users\\lizan\\source\\repos\\lizandro2390\\SistemaCitasMedicas-\\SistemaCitasMedicas\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

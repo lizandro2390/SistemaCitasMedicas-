@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZkKsrP27iV4=",
+  "dgSpecHash": "UqAUAD+KwPE=",
   "success": true,
-  "projectFilePath": "C:\\Users\\lizan\\source\\repos\\SistemaCitasMedicas\\SistemaCitasMedicas\\SistemaCitasMedicas.csproj",
+  "projectFilePath": "C:\\Users\\lizan\\source\\repos\\lizandro2390\\SistemaCitasMedicas-\\SistemaCitasMedicas\\SistemaCitasMedicas.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lizan\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\lizan\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
